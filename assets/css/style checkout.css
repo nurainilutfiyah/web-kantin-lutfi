@@ -1,0 +1,234 @@
+body{
+	margin: 0;
+	padding: 5px;
+	/* border: 5px solid red; */
+}
+
+fieldset{
+	height: 95%; 
+	margin: 0;
+}
+
+.button{
+	background-color: red;
+	width: 100%;
+	height: 100%;
+}
+
+.button1{
+	background-color: royalblue;
+	width: 150px;
+	height: 35px;
+	/* position: absolute; */
+	left: 500px;
+}
+
+legend{
+	color: black;
+	font-size: large;
+	font-weight: bolder;
+}
+
+#Content{
+	margin: 0;
+	padding: 2px;
+	width: 100%;
+	height: 1220px;
+	position: relative;
+	box-sizing: border-box;
+	/* border: 5px solid blue; */
+}
+
+#NA{
+	width:20%;
+	height:92%;
+	position: absolute;
+	border:2px solid black;
+	box-sizing: border-box;
+	padding: 10px;
+	margin: 20px;
+	margin-left: 0;
+}
+#K{
+	width:78.5%;
+	height:92%;
+	position:absolute;
+	left:21%;
+	border:2px solid black;
+	box-sizing: border-box;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+.button-plus{
+	
+}
+
+.deskripsi{
+	color:rgb(105, 105, 105);
+	margin: 0;
+	font-size: 12pt;
+	font-weight: normal;
+
+}
+
+label{
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+ td{
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	padding: 10px;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.form-control{
+	background-color:#fbfbfb;
+	margin: 7px;
+	width: 200px;
+}
+
+.radio-button{
+	margin: 7px;
+}
+
+ .textfield {
+        border-radius: 20px;
+        color:#white;
+}
+.textfield:hover {
+        border-radius: 20px;
+        color:#white;
+       
+}
+.tombol{
+	color:white;
+}
+.tombol2{
+	color:white;
+	margin-left: 125px; 
+	border-radius: 20px;
+
+}
+.ket{
+	left: 50px;
+}
+.MD{
+	text-align:center;
+	size: 40px;
+}
+/* Phone */
+@media(min-width:240px) and (max-width:480px) {
+#NA{
+	width: 100%;
+	position: relative;
+	height: 550px;
+}
+#K{
+	width: 100%;
+	position: relative;
+	left: 0;
+	height: 1250px;
+}
+.tb{
+	width: 330px;
+}
+table, td{
+	width: 100%;
+
+	
+
+}
+#NA fieldset{
+	width: 100%;
+	height: 300px;
+}
+#K fieldset{
+	width: 100%;
+	height: 900px;
+}
+footer{
+	position: relative;
+	top: 650px;
+}
+footer.footer-area .social a>i {
+	font-size: 20px;
+	padding: 1.5rem;
+	color: black;
+}
+	
+}
+/* Tablet */
+@media(min-width:481px) and (max-width:991px) {
+	
+}
+/* Dekstop */
+@media(min-width :992px) {
+
+	
+}
+/* NAVBAR */
+.navbar {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+	z-index: 1;
+	background-color: rgb(250, 96, 96);
+
+}
+
+.nav-link {
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 4px solid #f72a23;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4px;
+    margin-bottom: -8px;
+
+}
+
+.navbar-brand {
+    font-family: 'Itim', cursive;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+/* FOOTER */
+footer.footer-area {
+
+    padding: 3rem 0;
+    background-color: rgb(250, 96, 96);
+}
+
+footer.footer-area .social h5 {
+    font: normal 500 23px/ 30px var(--roboto);
+}
+
+footer.footer-area .social a>i {
+    font-size: 22px;
+    padding: 2rem;
+    color: black
+}
+
+footer.footer-area .social a:hover>i {
+    color: red;
+}
+
+.copyrights span {
+    font-family: 'Itim', cursive;
+    font-weight: bold;
+}

@@ -1,0 +1,229 @@
+/* NAVBAR */
+.navbar {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.nav-link {
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 4px solid #f72a23;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 4px;
+    margin-bottom: -8px;
+
+}
+
+.navbar-brand {
+    font-family: 'Itim', cursive;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+
+
+
+
+/* tombol  */
+.tombol {
+    text-transform: uppercase;
+    border-radius: 45px;
+}
+
+/*  */
+
+/* HEADER JUMBOTRON*/
+.jumbotron {
+    background-image: url("../images/b1.jpg");
+    background-size: cover;
+    height: 600px;
+    position: relative;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 90%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+
+}
+
+.jumbotron .display-4 {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    font-size: 70px;
+}
+
+.jumbotron h1 {
+    font-family: 'Fredoka One', cursive;
+}
+
+.jumbotron .display-4 span {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+/* TOKO */
+
+.outlet {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.jdl-outlet h3 {
+    font-size: 70px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: 'Fredoka One', cursive;
+    color: rgb(250, 96, 96);
+}
+
+.outlet img {
+    border-radius: 5%;
+}
+
+.outlet h3 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.outlet p {
+    margin: 20px 0;
+    font-family: Helvetica, sans-serif;
+}
+
+/* ABOUT */
+.about {
+    padding: 20px;
+}
+
+.jdl-about h3 {
+    font-size: 70px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: 'Fredoka One', cursive;
+    color: rgb(250, 96, 96);
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about span {
+    font-family: 'Itim', cursive;
+    font-weight: bold;
+}
+
+/*MENU*/
+
+/* FOOTER */
+footer.footer-area {
+
+    padding: 3rem 0;
+    background-color: rgb(250, 96, 96);
+}
+
+footer.footer-area .social h5 {
+    font: normal 500 23px/ 30px var(--roboto);
+}
+
+footer.footer-area .social a>i {
+    font-size: 22px;
+    padding: 2rem;
+    color: black
+}
+
+footer.footer-area .social a:hover>i {
+    color: red;
+}
+
+.copyrights span {
+    font-family: 'Itim', cursive;
+    font-weight: bold;
+}
+
+
+
+@media (min-width: 992px) {
+
+    .navbar-brand,
+    .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    }
+
+    .jumbotron {
+        margin-top: -60px;
+    }
+
+    /* TOKO */
+
+    .outlet {
+        text-align: left;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background-color: white;
+    }
+
+    .navbar-brand {
+        color: red !important;
+    }
+
+    /* outlet */
+    .outlet img {
+        margin-top: 60px;
+    }
+
+
+}
+
+
+@media (max-width: 576px) {
+
+    /* jumbotron */
+    .jumbotron {
+        height: 540px;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 35px;
+    }
+
+    /* footer */
+    footer.footer-area .social a>i {
+        font-size: 20px;
+        padding: 1.5rem;
+        color: black
+    }
+}

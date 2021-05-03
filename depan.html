@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/16225c1f98.js" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- My Title -->
+    <title>kantinKITA</title>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">kantinKITA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="depan.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#warung">Outlet</a>
+                    <a class="nav-item nav-link" href="#us">About US</a>
+                    <a class="nav-item nav-link" href="login.html">Log Out</a>
+                    <!-- <a class="nav-item btn btn-danger tombol" href="login.html">Login</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- HEADER JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class='display-4'> Hallo ! </h1>
+
+            <!-- <br> -->
+            <h1 class="display-4"><span> Selamat datang di kantinKITA.</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="container">
+        <!-- outlets -->
+        <div class="row justify-content-center jdl-outlet">
+            <div class="col" id="warung">
+                <h3>Outlet</h3>
+            </div>
+        </div>
+
+        <!-- outlet -->
+        <div id="place"> 
+
+        </div> 
+
+        <!-- About -->
+        <div class="row justify-content-center jdl-about">
+            <div class="col">
+                <h3>About</h3>
+            </div>
+        </div>
+
+        <div class="row about justify-content-center">
+            <div class="col-sm-10" id="us">
+                <p> <span>kantinKita</span> merupakan kantin yang berada di Fakultas Program Pendidikan Vokasi
+                    Universitas Brawijaya.
+                    Uniknya kantin ini menerapkan sistem self-order atau berbasis online. Dengan demikian kamu tidak
+                    perlu lagi untuk datang langsung ke kantin hanya untuk memesan makanan. Cukup membuka website ini,
+                    pilih makanan yg akan dipesan, bayar, dan TARAA! nomor antrian muncul dan silahkan tunggu pesanan
+                    kamu di meja yang tersedia. Praktis bukan? Sistem ini juga menerapkan SOP kesehatan Covid-19
+                    sehingga kamu tidak perlu lagi takut untuk memesan makanan di kantin.
+                </p>
+            </div>
+        </div>
+        <!-- Service -->
+    </div>
+
+    <!-- footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="">
+                <div class="social text-center">
+                    <h5 class="text-uppercase">Follow Us</h5>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyrights text-center">
+                    <p>Copyright © 2020 - <span>kantinKita</span> </p>
+                    <p class="para">
+                        Allright Made with <span style="color: red;">❤</span> by Us
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- end footer -->
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $.getJSON("data/outlet.php", function(result){
+            $.each(result, function(i, data1){
+                $.each(data1, function(j, data2){
+                    let id_outlet = data2.id_outlet;
+                    let nama = data2.nama;
+                    let desk = data2.deskripsi;
+                    let gambar = data2.gambar;
+                    let outlet = "<div class='row outlet'> ";
+                    outlet += "<div class='col-sm-6'>";
+                    outlet += "<img src='assets/images/"+gambar+"' class='img-fluid'></div>";
+                    outlet += "<div class='col-sm-6'><h3>"+nama+"</h3>";
+                    outlet += "<p>"+desk+"</p>";
+                    outlet += "<a href=menu.html?data="+id_outlet+" class='btn btn-danger tombol'>Kunjungi Kedai</a>";
+                    outlet += "</div></div>";
+                    $("#place").append(outlet);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
